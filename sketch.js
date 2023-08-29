@@ -7,7 +7,7 @@ let width = 400;
 let innerWidth = 200;
 let gap = 30;
 function preload(){
- sound = loadSound('free.mp3');
+ sound = loadSound('https://raw.githubusercontent.com/sverp/unknow_plesure_visualizer/blob/main/free.mp3');
 }
 
 function setup(){
