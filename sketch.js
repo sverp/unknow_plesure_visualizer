@@ -7,10 +7,11 @@ let width = 400;
 let innerWidth = 200;
 let gap = 30;
 function preload(){
- sound = loadSound('https://raw.githubusercontent.com/sverp/unknow_plesure_visualizer/blob/main/free.mp3');
+ sound = loadSound('free1.mp3');
 }
 
 function setup(){
+  getAudioContext().suspend();
   createCanvas(800,800);
   fft = new p5.FFT();
   sound.play();
@@ -22,11 +23,11 @@ function draw(){
   text("(" + floor(mouseX) + ", " + floor(mouseY) + ")", mouseX, mouseY); */
 
 
-  background('black')
+  background('black');
   textSize(16);
   strokeWeight(5);
   stroke('white');
-  fill(0);
+  fill('black');
   
 
   freq = fft.analyze();
@@ -61,4 +62,8 @@ function draw(){
     endShape();
 
   }
+}
+
+function mousePressed() {
+  userStartAudio();
 }
